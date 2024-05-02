@@ -1,9 +1,13 @@
 // animações
 AOS.init();
+
 // confirmar presença
-function confirm () {
-    document.getElementById('confirm-message').innerHTML="Você confirmou a sua presença."
-}
+const botao = document.getElementById("confirm-button");
+const elemento = document.getElementById("message");
+
+botao.addEventListener("click", function() {
+    elemento.classList.add("hero__confirm-message--is-active");
+});
 
 // contador / timer
 const eventTime = new Date ("Oct 05, 2024 17:30:00");

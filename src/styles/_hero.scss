@@ -80,10 +80,15 @@
     }
     
     &__confirm-message {
-        text-align: center;
-        text-transform: uppercase;
-        margin-top: 18px;
-        color: variaveis.$textColorSecundary;
-        transition: ease .3s;
+        display: none;
+
+        &--is-active {
+            display: block;
+            text-align: center;
+            text-transform: uppercase;
+            margin-top: 18px;
+            color: variaveis.$textColorSecundary;
+            transition: ease .3s;
+        }
     }
 }

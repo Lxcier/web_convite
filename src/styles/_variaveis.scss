@@ -1,0 +1,118 @@
+// Text colors
+$textColorPrimary: #FFF;
+$textColorSecundary: #00ff15;
+
+// others
+$buttonColor: #FFF;
+$overlayColor: #0000003f;
+
+// text styles
+@mixin text($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+}
+
+.text--big {
+    @include text (21px);
+
+    @media (max-width: 640px) {
+        @include text (18px);
+    }
+}
+
+.text {
+    @include text;
+
+    @media (max-width: 640px) {
+        @include text (16px);
+    }
+}
+
+.text--small {
+    @include text(14px);
+
+    @media (max-width: 640px) {
+        @include text (14px);
+    }
+}
+
+// titles styles
+@mixin title ($fontSize: 40px) {
+    @include text ($fontSize);
+}
+
+.title--big {
+    @include title (52px);
+    text-transform: uppercase;
+
+    @media (max-width: 640px) {
+        @include title(38px)
+    }
+}
+
+.title {
+    @include title;
+
+    @media (max-width: 640px) {
+        @include title(24px)
+    }
+}
+
+.title--small {
+    @include title (28px);
+
+    @media (max-width: 640px) {
+        @include title(22px)
+    }
+}
+
+// flexbox
+@mixin d-flex(){
+    display: flex;
+    align-items: center;
+}
+
+.d-flex {
+    @include d-flex();
+}
+
+@mixin d-flex--center () {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.d-flex--center {
+    @include d-flex--center();
+}
+
+@mixin d-flexColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.d-flexColumn {
+    @include d-flexColumn();
+}
+
+@mixin d-flexColumn--center () {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.d-flexColumn--center {
+    @include d-flexColumn--center();
+}
+
+// overlay
+@mixin overlay () {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: .4;
+    position: absolute;
+}

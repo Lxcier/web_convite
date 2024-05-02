@@ -1,0 +1,75 @@
+@use 'variaveis';
+
+
+.invitation {
+    background-image: url(/src/images/about-me.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &::before {
+        @include variaveis.overlay();
+    }
+    .container {
+        padding-top: 40px;
+        @include variaveis.d-flex--center();
+    }
+
+    &__content {
+        @include variaveis.d-flex--center();
+        gap: 5%;
+
+        @media (max-width: 1024px) {
+            display: block;
+            margin: 0 auto;
+            gap: 0;
+        }
+        
+        @media (max-width: 640px) {
+            display: block;
+            margin: 0 auto;
+            gap: 0;
+        }
+
+        &__title {
+            width: fit-content;
+
+            @media (max-width: 1024px) {
+                display: block;
+                margin: 0 auto 16px;
+            }
+
+            @media (max-width: 640px) {
+                display: block;
+                margin: 0 auto 16px;
+            }
+
+            .title--small {
+                text-transform: uppercase;
+            }
+        }
+        &__text {
+            width: 46%;
+
+            @media (max-width: 1024px) {
+                display: block;
+                margin: 0 auto;
+                width: 80%;
+
+                .text {
+                    text-align: justify;
+                }
+            }
+
+            @media (max-width: 640px) {
+                display: block;
+                margin: 0 auto;
+                width: 100%;
+
+                .text {
+                    text-align: justify;
+                }
+            }
+            
+        }
+    }
+}

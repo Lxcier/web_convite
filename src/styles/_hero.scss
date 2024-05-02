@@ -1,0 +1,89 @@
+@use 'variaveis';
+
+@mixin d-flex () {
+    display: flex;
+    align-items: center;
+}
+
+.hero {
+    background-image: url(/src/images/fundo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &::before {
+        @include variaveis.overlay();
+    }
+
+    .container {
+        padding-top: 40px;
+    }
+
+    &__logo {
+        display: block;
+        margin: 0 auto;
+        height: 60px;
+        cursor: pointer;
+        transition: ease .3s;
+
+        &:hover {
+            transform: scale(1.03);
+        }
+
+        @media (max-width: 1024px) {
+            height: 50px;
+        }
+
+        @media (max-width: 640px) {
+            height: 48px;
+        }
+
+        @media (min-height: 1024px) {
+            height: 64px;
+        }
+
+        @media (min-height: 1368px) {
+            height: 64px;
+        }
+    }
+
+    &__invite {
+        margin: 20vh auto 0;
+        text-align: center;
+
+        @media (min-height: 1024px) {
+            margin: 30vh auto 0;
+        }
+
+        @media (min-height: 1368px) {
+            margin: 35vh auto 0;
+        }
+
+        .title--big {
+            margin: 18px 0;
+        }
+    }
+
+    &__button {
+        display: block;
+        text-align: center;
+        background-color: transparent;
+        margin: 5vh auto 0;
+        padding: 18px;
+        border: 1px solid #FFF;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: .3s ease;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+    
+    &__confirm-message {
+        text-align: center;
+        text-transform: uppercase;
+        margin-top: 18px;
+        color: variaveis.$textColorSecundary;
+        transition: ease .3s;
+    }
+}

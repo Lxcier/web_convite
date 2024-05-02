@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Convite</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles/main.scss">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+</head>
+<body>
+    <header class="hero">
+        <div class="container">
+            <img src="/src/images/ebac_logo.svg" alt="Logo da EBAC" class="hero__logo" data-aos="zoom-in-up"
+            data-aos-duration="1000">
+            <div class="hero__invite" data-aos="fade-left" data-aos-duration="500">
+                <h3 class="title--small">Você foi convidado para...</h3>
+                <h1 class="title--big">O meu aniversário!</h1>
+                <h3 class="text--big" id="timer-text">A festa acontecerá em: <span id="timer"></span></h2>
+            </div>
+            <button class="hero__button text" id="invite-cta" onclick="confirm()" data-aos="fade-up"
+            data-aos-duration="2000">Confirmar presença</button>
+            <p class="text hero__confirm-message" id="confirm-message"></p>
+        </div>
+    </header>
+    <section class="invitation" id="invite">
+        <div class="container">
+            <div class="invitation__content" data-aos="zoom-in-up" data-aos-duration="800" data-aos-anchor="#invite">
+                <div class="invitation__content__title">
+                    <h2 class="title--small">Vamos todos celebrar!</h2>
+                </div>
+                <div class="invitation__content__text">
+                    <p class="text">
+                        O aniversário é um momento especial para celebrar a vida e compartilhar a alegria com aqueles que mais amamos. Queremos que você e sua família se juntem a nós nesse momento especial para tornar o dia ainda mais memorável. Será uma oportunidade de reunir amigos e parentes, compartilhar risadas e criar novas lembranças juntos. Sua presença será muito importante para nós e ajudará a tornar essa celebração ainda mais especial. Esperamos que você possa se juntar a nós e compartilhar desse dia festivo!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="localization" id="local">
+        <div class="container">
+            <div class="localization__adress" data-aos="zoom-in-up" data-aos-duration="800" data-aos-anchor="#local">
+                <div class="localization__adress__text">
+                    <h3 class="title--small">Onde será a festa!?</h3>
+                    <p class="text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique fugiat eos totam libero est unde, incidunt dolores ex. Perferendis laudantium.
+                    </p>
+                    <p class="text--big"><i class="bi bi-pin"></i>
+                        Av. Front-end, N° 537, 12345-678 - Bairro JavaScript, EBAC City - FSA
+                    </p>
+                    <p class="text--big time"><i class="bi bi-clock"></i>
+                        Às 17:30
+                    </p>
+                </div>
+                <div class="localization__adress__image">
+                    <picture>
+                        <img src="/src/images/Localização.png" alt="Banner da localization" class="localization__adress__image__banner">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="/src/scripts/index.js"></script>
+</body>
+</html>
